@@ -1,0 +1,202 @@
+#project-single-main {
+
+    .project-single {
+
+        h2 {
+            @include mq(em($mtablet)) {
+                font-size: 2rem;
+            }
+        }
+
+
+        h3 {
+            @include mq(em($mtablet)) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .project-single-item {
+
+            @include mq(em($mtablet)) {
+                margin-top: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                    "projectinfo mockup"
+                    "projectsummary projectsummary"
+                    "images images"
+                    "storywrapper storywrapper";
+            }
+
+            .project-info-wrapper {
+                h1 {
+                    text-align: left;
+                    margin-left: 1rem;
+                    margin-top: 1rem;
+                }
+
+                @include mq(em($mtablet)) {
+                    grid-area: projectinfo;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                }
+
+                .project-dot {
+                    width: 25%;
+                    margin-top: 5rem;
+                }
+
+                .project-links {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1rem;
+
+                    svg {
+                        fill: $main;
+                        margin-right: .5rem;
+                    }
+                }
+
+                .project-tools {
+                    .project-tool-tags {
+                        display: flex;
+                        column-gap: .5rem;
+                        flex-wrap: wrap;
+                        padding: 0;
+                        margin-left: 1rem;
+                        
+                        .project-tool-tag {
+                            @include border-tag-dark($main);
+                        }
+                    }
+
+                    h2 {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            
+            .project-single-mockup {
+                align-self: end;
+    
+                @include mq(em($mtablet)) {
+                    grid-area: mockup;
+                    max-width: 100%;
+                    max-height: 50vh;
+                    justify-self: end;
+                }
+    
+                @include mq(em($mtablet-2)) {
+                    max-width: 100%;
+                }
+            }
+
+            .project-summary {
+
+                @include mq(em($mtablet)) {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+
+                p {
+                    @include border-box($main);
+                    margin: 1rem 0;
+                    padding: 1rem;
+                }
+
+                @include mq(em($mtablet)) {
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    grid-area: projectsummary;
+                }
+            }
+
+            // when width > 850px (desktop view)
+            .project-single-image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+
+                @include mq(em($mtablet)) {
+                    grid-area: images;
+                    
+                    img {
+                        max-width: 45%;
+                    }
+                }
+            }
+
+            .project-story-wrapper {
+                @include mq(em($mtablet)) {
+                    grid-area: storywrapper;
+                }
+            }
+        }
+    }
+
+}
+
+// collapsible
+
+.project-story-wrapper {
+    border: 1px $main solid;
+    border-radius: 10px;
+    margin: 0;
+
+    @include mq(em($mtablet)) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    article {
+        .collapsible-toggle-wrapper {
+            background-color: $main;
+            border-bottom: 1px $sub2 solid;
+            border-radius: 10px;
+            margin: 0;
+        }
+
+        p {
+            padding: .5rem 1rem;
+        }
+    }
+
+    article:first-of-type {
+        border-radius: 10px 10px 0 0;
+
+        .collapsible-toggle-wrapper {
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    article:last-of-type {
+        border-radius: 0 0 10px 10px;
+
+        .collapsible-toggle-wrapper {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+}
+
+// Other project section
+.other-projects {
+
+    @include mq(em($mtablet)) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .other-project-item {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            @include border-tag($main)
+        }    
+    }
+}

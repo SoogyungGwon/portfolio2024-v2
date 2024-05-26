@@ -1,0 +1,41 @@
+// Imports
+
+// Google Fonts - Import
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+
+// Functions
+@import './utilities/functions.scss';
+
+// Settings
+@import './base/settings';
+
+// Utilities
+@import './utilities/mixins.scss';
+
+// Reset
+@import './base/reset';
+
+// Base
+@import './base/type';
+@import './base/links';
+@import './base/button';
+@import './base/video';
+@import './base/wrapper';
+@import './base/collapsible';
+
+// Components
+@import './header';
+@import './body';
+@import './footer';
+@import './loading';
+
+// Pages
+@import './siteintro';
+@import './home';
+@import './contact';
+@import './projects';
+@import './project-single';
+@import './about';
+
+
+

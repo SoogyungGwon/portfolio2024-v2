@@ -1,0 +1,153 @@
+#about-main {
+
+    h1 {
+        text-align: left;
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    .introduction-text {
+        padding-top: 5rem;
+
+        #about-dot {
+            max-width: 20%;
+
+            @include mq(em($mtablet-2)) {
+                max-width: 15%;
+            }
+        }
+
+        .about-story-heading {
+            @include mq(em($mlandscape-2)) {
+                grid-area: storyheading;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+
+                h1, h2 {
+                    margin: 2rem 1rem 1rem 1rem;
+                }
+            }
+        }
+
+        .cover-story-image {
+            max-width: 50%;
+            align-self: end;
+
+            @include mq(em($mlandscape-2)) {
+                grid-area: storyimage;
+                max-width: 100%;
+                height: 100%;
+                max-height: 50vh;
+                justify-self: end;
+            }
+
+            @include mq(em($mtablet-2)) {
+                grid-area: storyimage;
+                max-width: 100%;
+                max-height: 30vh;
+            }
+        }
+
+        .about-story-content {
+            @include mq(em($mlandscape-2)) {
+                grid-area: storycontent;
+                margin-top: 2rem;
+            }
+
+            .about-story-para {
+                @include mq(em($mlandscape-2)) {
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        @include mq(em($mlandscape-2)) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "storyheading storyheading storyimage"
+                "storycontent storycontent storycontent";
+        }
+    }
+
+    // Skillset section
+    .about-skillset-heading {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: .5rem;
+        align-items: center;
+        margin-bottom: .75rem;
+
+        @include mq(em($mlandscape-2)) {
+            margin: 0 1rem 1rem 1rem;
+        }
+        
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .skillset-tags {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include mq(em($mlandscape-2)) {
+            margin: 0 1rem;
+        }
+
+        @include mq(em($mtablet)) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include mq(em($desktop-big)) {
+            grid-template-columns: repeat(4,1fr);
+        }
+        
+        .skillset-tag {
+            @include border-tag($main);
+            margin: .25rem;
+            padding: 0 1.5rem;
+            font-size: .9rem;
+        }
+    }
+
+
+    // Fun-fact section
+    .about-blocks {
+        @include mq(em($mlandscape-2)) {
+            margin: 0 1rem;
+        }
+
+        .funfact-item {
+            border: 1px $main solid;
+            border-radius: 10px;
+
+            article {
+                .collapsible-toggle-wrapper {
+                    background-color: $main;
+                    border-bottom: 1px $sub2 solid;
+                }
+            }
+
+            article:first-of-type {
+                border-radius: 10px 10px 0 0;
+
+                .collapsible-toggle-wrapper {
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            article:last-of-type {
+                border-radius: 0 0 10px 10px;
+
+                .collapsible-toggle-wrapper {
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+        }
+    }
+}

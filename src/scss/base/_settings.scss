@@ -1,0 +1,26 @@
+// App Style Settings
+
+// Colors
+$main: #3B2C9B;
+$sub1: #7C72BD;
+$sub2: #fff;
+$sub3: #fff;
+// #FFF1D9;
+
+$background: #fff;
+
+// Type
+$bodyFont: 'Glegoo', serif;
+$headingFont: 'Judson', serif;
+
+// Layout
+$section-padding: em(16) em(20);
+$page-top-padding: 70px;
+
+// Breakpoints
+$msmall: 400; //400 ~ 480
+$mlandscape: 480; //480 ~ 652
+$mlandscape-2: 625; //652 ~ 850
+$mtablet: 850; //850 ~ 1000
+$mtablet-2: 1000; //1000
+$desktop-big: 1600;

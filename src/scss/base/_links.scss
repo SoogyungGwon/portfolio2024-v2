@@ -1,0 +1,16 @@
+a{
+    color: $main;
+    text-decoration: none;
+
+    &:hover {
+        color: darkmagenta;
+    }
+
+    &:active {
+        color: $main;
+    }
+
+    &:visited {
+        color: $main;        
+    }
+}

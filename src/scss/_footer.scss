@@ -1,0 +1,27 @@
+footer {
+    text-align: center;
+    height: 75px;
+
+    hr {
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    .footer-flex-container {
+        display: flex;
+        flex-direction: column;
+
+        @include mq(em($mlandscape)) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        p {
+            padding-left: 1rem;
+        }
+
+        .contact-links {
+            margin: 0;
+        }
+    } 
+}

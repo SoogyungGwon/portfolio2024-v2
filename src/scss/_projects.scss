@@ -1,0 +1,42 @@
+#project-main {
+    min-height: calc(100vh - 50px);
+}
+
+.project-blocks {
+    
+    .project-item {
+
+        @include mq(em($mtablet)) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }        
+
+        .project-scale-box {
+            padding: 1rem;
+        }
+    }
+    
+    h1 {
+        margin-top: 50px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    hr {
+        border: 1px dotted $main;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    text-align: center;
+
+    .project-dot {
+        max-width: 25%;
+        margin-top: 1rem;
+    }
+
+}

@@ -1,0 +1,51 @@
+// Type
+
+body {
+    font-family: $bodyFont;
+    color: $main;
+}
+
+nav {
+    font-family: $headingFont;
+    font-size: 1rem;
+    font-weight: 700;
+
+    @include mq(em($mtablet)){
+        font-size: 1.5rem;
+    }
+}
+
+section {
+    margin: 0;
+    padding: $section-padding;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+
+    @include mq(em($mtablet)){
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    @include mq(em($mtablet)){
+        font-size: 2.25rem;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: $headingFont;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+    margin: .5rem 0;
+}
+
+button {
+    font-family: $bodyFont;
+}
+

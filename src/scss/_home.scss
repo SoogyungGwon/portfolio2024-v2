@@ -1,0 +1,336 @@
+// 1ST SECTION
+.intro {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    padding: $page-top-padding 0 0 0;
+
+    @include mq(em($mlandscape)) {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    @include mq(em(1000)) {
+        flex-wrap: nowrap;
+    }
+
+    #intro-text-wrapper {
+        margin-bottom: calc(90vh / 2.8);
+
+        @include mq(em($msmall)) {
+            margin-bottom: calc(90vh / 3.5);
+        }
+
+        @include mq(em($mlandscape)) {
+            margin: 0 auto 3rem auto;            
+        }
+
+        @include mq(em($mtablet-2)) {
+            margin: 0;
+        }
+
+        .intro-text {
+            position: relative;
+            margin: 0 auto;
+
+            @include mq(em($mlandscape)) {
+                display: flex;
+                padding: 1rem;
+            }
+
+            #first-dot {
+                padding: 4rem;
+                width: 90vw;
+                height: calc((90vh - 50px)/2);
+                min-height: 290px;
+                min-width: 290px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                z-index: -1;
+
+                @include mq(em($mlandscape)) {
+                    height: auto;
+                    min-height: 200px;
+                    min-width: 200px;
+                }
+
+                @include mq(em($mlandscape-2)) {
+                    min-height: 300px;
+                    min-width: 300px;
+                }
+
+                .describe-me-01 {
+                    color: $sub3;
+                    font-weight: 300;
+                    font-size: 1.5rem;
+
+                    @include mq(em($mlandscape)) {
+                        font-size: 1rem;
+                    }
+
+                    @include mq(em($mlandscape-2)) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq(em(1000)) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .title {
+                    color: $sub3;
+                    padding: 0 1rem;
+                    max-width: 380px;
+                    margin: 0 auto;
+
+                    @include mq(em($mlandscape)) {
+                        font-size: 1.25rem;
+                    }
+
+                    @include mq(em($mlandscape-2)) {
+                        font-size: 1.75rem;
+                    }
+
+                    @include mq(em($mtablet-2)) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .plus {
+                position: relative;
+                z-index: 99;
+                top: calc((100vh - 50px) / -30);
+                font-size: 2rem;
+
+                @include mq(em($mlandscape)) {
+                    text-align: center;
+                    align-content: center;
+                    top: auto;
+                    font-size: 2rem;
+                }
+            }
+
+            #second-dot {
+                padding: 4rem;
+                width: 85vw;
+                height: calc((85vh - 50px)/2.5);
+                min-height: 290px;
+                min-width: 290px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                top: calc((100vh - 50px)/2.5);
+                z-index: -1;
+                margin: 0 auto;
+
+                @include mq(em($mlandscape)) {
+                    position: static;
+                    height: auto;
+                    min-height: 200px;
+                    min-width: 200px;
+                }
+
+                @include mq(em($mlandscape-2)) {
+                    min-height: 300px;
+                    min-width: 300px;
+                }
+
+                .describe-me-02 {
+                    color: $sub3;
+                    font-weight: 300;
+                    font-size: 1.5rem;
+
+                    @include mq(em($mlandscape)) {
+                        font-size: 1rem;
+                    }
+
+                    @include mq(em($mlandscape-2)) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq(em($mtablet-2)) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .name {
+                    color: $sub3;
+                    padding: 0 1rem;
+                    max-width: 300px;
+                    margin: 0 auto;
+
+                    @include mq(em($mlandscape)) {
+                        font-size: 1.25rem;
+                    }
+
+                    @include mq(em($mlandscape-2)) {
+                        font-size: 1.75rem;
+                    }
+
+                    @include mq(em($mtablet-2)) {
+                        font-size: 2rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+    #hightlights-wrapper {
+        @include border-box($main);
+        text-align: center;        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+
+    
+        h2 {
+            text-align: center;
+        }
+
+        @include mq(em($mlandscape)) {
+            margin: 0 1rem;
+        }
+
+        @include mq(em($mtablet-2)) {
+            max-height: 320px;
+            max-width: 25%;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+// 2nd Section - featured
+#m-featured {
+
+    .featured-wrapper {
+
+        h2 {
+            text-align: center;
+        }
+
+        .swiper {
+            @include border-box($main);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            .featured-text-block {
+                margin-bottom: 3rem;
+
+                .featured-name {
+                    background-color: $main;
+                    color: $sub3;
+                    min-height: 3.5rem;
+                    align-content: center;
+                }
+
+                .featured-tools {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#featured {
+    .featured-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        column-gap: 1rem;
+        flex: 1 1;
+
+        .featured-container {
+           @include border-box($main);
+           padding: 0;
+           margin: 0;
+           flex: 1;
+           
+           .featured-text-block {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                h3 {
+                    background-color: $main;
+                    border-radius: 20px 20px 0 0;
+                    color: $sub2;
+                    padding: 1rem;
+                }
+
+                .featured-tools {
+                    padding: .5rem 1rem;
+                }
+
+                button {
+                    margin: 0 .25rem .75rem 0;
+                }
+            }
+        }
+    }
+}
+
+
+// 3rd Section - Quickview
+#quickview-home {
+    .quickview-wrapper {
+        @include border-box($main);
+        margin: 0;
+
+        .about-excerpt {
+            margin-bottom: 1rem;
+            
+            img {
+                display: none;
+            }
+        }
+        
+        .quickview-tags {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: .25rem;
+
+            .quickview-tag {
+                @include border-tag-dark($main);
+                font-size: 0.9rem;
+                
+            }
+        }
+        
+        .quickview-findout-button {
+            border: none;
+            width: 100%;
+            margin-top: .5rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            img {
+                width: 15px;
+                margin-left: .5rem;
+            }
+        }
+    }
+}
+
+// 4th Section - Are you curious...
+.curious-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    .curious-tag {
+        @include border-tag($main);
+    }
+}
+
+

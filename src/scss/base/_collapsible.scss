@@ -1,0 +1,37 @@
+// Collapsible related CSS
+.collapsible-container {
+
+    .collapsible-toggle-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        color: $sub2;
+        height: auto;
+        padding: 0 .25rem;
+        
+        h3 {
+            margin: 1rem .25rem;
+        }
+
+        .collapsible-button {
+            margin-right: .25rem;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            background-color: $main;
+
+            svg {
+                fill: $sub2;
+            }
+        }
+
+    }
+
+    p {
+        padding: 0 .25rem;
+        background-color: $sub2;
+    }
+}

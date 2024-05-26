@@ -1,0 +1,40 @@
+//////////////////////////////////////////////////
+/// GENERAL
+
+body {
+    background-color: $background;
+}
+
+main {
+  min-height: calc(100vh - 50px - 75px);
+}
+
+@media (min-width: 120em) {
+  nav, footer {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+//Scroll bar
+/* For Webkit Browsers (Chrome, Safari) */
+
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: $background;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #000000
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #000000;
+}
+
+//////////////////////////////////////////////////
