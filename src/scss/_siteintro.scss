@@ -14,7 +14,6 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-
         position: relative;
 
         h1 {
@@ -36,25 +35,39 @@
             }
 
             @include mq(em($mtablet)) {
-                font-size: clamp(3rem, 3vw, 6rem);
+                font-size: clamp(2rem, 2vw, 6rem);
             }
 
             @include mq(em($mtablet-2)) {
-                font-size: clamp(3rem, 5vw, 7rem);
+                font-size: clamp(2rem, 3vw, 7rem);
             }
         }
         
         .start-button {
-            font-size: 1rem;
+            font-size: .8rem;
             padding: .5rem 1.5rem;
             margin: 1rem;
             border-radius: 20px;
-             background-color: rgba(59,44,155,0.7);
+            background-color: rgba(59,44,155,0.7);
             color: $sub2;
+            position: absolute;
+            bottom: 20px;
 
             @include mq(em($mtablet)) {
-                font-size: clamp(1rem, 2vw, 2rem);
+                font-size: clamp(1rem, 2vw, 1.5rem);
             }
         }
     }
+
+    .site-intro-my-name {
+        font-family: $bodyFont;
+        font-size: 0.75rem;
+        font-weight: 300;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: $sub2;
+        text-align: center;
+    }
+
 }
