@@ -11,6 +11,10 @@ const AboutSkillset = () => {
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
 
+  const handleSkillIcon = () => {
+
+  }
+
   useEffect(() => {
     const fetchData = async () => {
         const response = await fetch(restPath)
@@ -32,11 +36,16 @@ const AboutSkillset = () => {
     <section className="about-skillset" id="about-skillset">
       <div className="about-skillset-heading">
         <h2>Skillset</h2>
-        <button>with icon</button>
+        {/* <button onClick={handleSkillIcon}>with icon</button> */}
       </div>
       <div className="skillset-tags">
         {restData.map((tag) => (
             <span key={tag.id} className="skillset-tag">{tag.name}</span>
+          ))}
+      </div>
+      <div className="skillset-image-tags">
+        {restData.map((tagicon) => (
+            <img src={tagicon.acf.skillset_icons.skillset_icons} key={tagicon.id} className="skillset-tag" />
           ))}
       </div>
     </section>
