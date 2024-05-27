@@ -13,14 +13,13 @@ import coverImg from '../assets/my-story-cover.jpg'
 // import variables
 import { restBase } from '../globals/globalVariables'
 
-const AboutPage = ( { setIntroDone }) => {
+const AboutPage = () => {
   const restPath = restBase + 'pages/30'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
+  
 
   useEffect(() => {
-    setIntroDone(true)
-    
     const fetchData = async () => {
         const response = await fetch(restPath)
 

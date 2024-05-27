@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useLocation, Routes, Route } from 'react-router-dom';
 
 // Components
 import Header from './components/Header'
@@ -19,23 +19,24 @@ import { useState } from 'react';
 const App = () => {
 
     const [introDone, setIntroDone] = useState(false)
+    const location = useLocation();
 
     return (
         <>
-        {introDone ?
-            <>
+        {!introDone && location.pathname === '/' ?
+            <IntroPage setIntroDone={setIntroDone}/>
+        :
+           <>
             <Header />
             <Routes>
                 <Route path="/home" exact element={ <HomePage /> } />
-                <Route path="/about" element={ <AboutPage setIntroDone={setIntroDone}/> } />
+                <Route path="/about" element={ <AboutPage /> } />
                 <Route path="/projects" element={ <ProjectsPage />} />
                 <Route path="/projects/:slug" element={ <ProjectSinglePage />} />
-                <Route path="*" element={<PageNotFound setIntroDone={true}/>} />
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
             <Footer />
             </>
-        :
-           <IntroPage setIntroDone={setIntroDone}/>
         }
         </>
     )
