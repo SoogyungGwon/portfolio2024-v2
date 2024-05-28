@@ -22,8 +22,13 @@ const ProjectSinglePage = () => {
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
   const [width, setWidth] = useState(window.innerWidth);
-  
-  useEffect(() => {
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
+    useEffect(() => {
+    scrollToTop();
     const handleResize = () => {
       setWidth(window.innerWidth);
     };

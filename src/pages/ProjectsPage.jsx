@@ -11,8 +11,13 @@ const ProjectsPage = () => {
   const restPath = restBase + 'soo-project/?_embed&order=asc'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
+  
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }  
 
   useEffect(() => {
+    scrollToTop();
     const fetchData = async () => {
         const response = await fetch(restPath)
 
@@ -32,7 +37,7 @@ const ProjectsPage = () => {
     { isLoaded ?
     <section className="project-blocks">
       <h1>Projects</h1>
-      <p>Hover-over or tap on the blocks.</p>
+      <p>Click or tap on the title / image.</p>
       <div className="project-item">
         {restData.map(project=>
           <article key={project.id} className="project-scale-box"  id={`project-${project.id}`}>

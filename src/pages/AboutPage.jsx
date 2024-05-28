@@ -17,9 +17,13 @@ const AboutPage = () => {
   const restPath = restBase + 'pages/30'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
-  
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }  
 
   useEffect(() => {
+    scrollToTop();
     const fetchData = async () => {
         const response = await fetch(restPath)
 

@@ -14,17 +14,15 @@ import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ProjectSinglePage from './pages/ProjectSinglePage'
 import PageNotFound from './pages/PageNotFound'
-import { useState } from 'react';
 
 const App = () => {
 
-    const [introDone, setIntroDone] = useState(false)
     const location = useLocation();
 
     return (
         <>
-        {!introDone && location.pathname === '/' ?
-            <IntroPage setIntroDone={setIntroDone}/>
+        {location.pathname === '/' ?
+            <IntroPage />
         :
            <>
             <Header />
