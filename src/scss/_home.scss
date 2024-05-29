@@ -9,7 +9,7 @@
 
     @include mq(em($mlandscape)) {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     @include mq(em(1000)) {
@@ -21,7 +21,7 @@
         max-height: 100vh;
 
         @include mq(em($msmall)) {
-            margin-bottom: calc(90vh / 3.5);
+            margin-bottom: calc(90vh / 3);
         }
 
         @include mq(em($mlandscape)) {
@@ -270,7 +270,7 @@
                 }
 
                 .featured-tools {
-                    padding: .5rem 1rem;
+                    padding: 3rem 1.5rem;
                 }
 
                 button {
@@ -327,6 +327,7 @@
 // 4th Section - Are you curious...
 .curious-tags {
     display: flex;
+    column-gap: .25rem;
     flex-wrap: wrap;
 
     .curious-tag {

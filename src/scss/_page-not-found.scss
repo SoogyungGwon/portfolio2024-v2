@@ -1,0 +1,27 @@
+.page-not-found-wrapper {
+
+    min-height: calc(100vh - 50px - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .oops-text {
+        padding-top: $page-top-padding;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .curious-about {
+        text-align: center;
+        
+        h2 {
+            font-size: 2rem;
+        }
+
+        .curious-tags {
+            justify-content: center;
+            column-gap: .25rem;
+        }
+    }
+}
