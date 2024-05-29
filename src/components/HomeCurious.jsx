@@ -33,8 +33,8 @@ const HomeCurious = () => {
       <h2>Are You Curious About...</h2>
       <div className="curious-tags">
         {restData.acf.curious_block_tags.map(tag => (
-          <span key={tag.curious_tag}className="curious-tag">{tag.curious_tag}
-          </span>
+          <a href={tag.curious_tag_link['url']} key={tag.curious_tag}className="curious-tag">{tag.curious_tag}
+          </a>
         ))}
       </div>
     </section>
