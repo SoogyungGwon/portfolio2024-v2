@@ -65,7 +65,7 @@
                 }
 
                 .describe-me-01 {
-                    color: $sub3;
+                    color: $sub2;
                     font-weight: 300;
                     font-size: 1.5rem;
 
@@ -83,7 +83,8 @@
                 }
 
                 .title {
-                    color: $sub3;
+                    color: $sub2;
+                    line-height: 1;
                     padding: 0 1rem;
                     max-width: 380px;
                     margin: 0 auto;
@@ -143,7 +144,7 @@
                 }
 
                 .describe-me-02 {
-                    color: $sub3;
+                    color: $sub2;
                     font-weight: 300;
                     font-size: 1.5rem;
 
@@ -161,7 +162,8 @@
                 }
 
                 .name {
-                    color: $sub3;
+                    color: $sub2;
+                    line-height: 1.25;
                     padding: 0 1rem;
                     max-width: 300px;
                     margin: 0 auto;
@@ -190,10 +192,18 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-
     
         h2 {
             text-align: center;
+        }
+
+        .highlight-more-button {
+
+            a:hover {
+                background-color: $sub1;
+                color: $sub2;
+                border: $sub1;
+            }
         }
 
         @include mq(em($mlandscape)) {
@@ -228,7 +238,7 @@
 
                 .featured-name {
                     background-color: $main;
-                    color: $sub3;
+                    color: $sub2;
                     min-height: 3.5rem;
                     align-content: center;
                 }
@@ -302,10 +312,10 @@
             column-gap: .25rem;
 
             .quickview-tag {
-                @include border-tag-dark($main);
+                @include border-tag-dark($sub1);
                 font-size: 0.9rem;
-                
             }
+           
         }
         
         .quickview-findout-button {
@@ -315,6 +325,12 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+
+            &:hover {
+                background-color: transparent;
+                color: $main;
+                text-decoration: underline;
+            }
 
             img {
                 width: 15px;
@@ -332,6 +348,12 @@
 
     .curious-tag {
         @include border-tag($main);
+
+        &:hover {
+            background-color: $sub1;
+            color: $sub2;
+            border: $sub1;
+        }
     }
 }
 

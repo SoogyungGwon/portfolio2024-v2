@@ -10,7 +10,8 @@
 @import './base/settings';
 
 // Utilities
-@import './utilities/mixins.scss';
+@import './utilities/mixins';
+@import './utilities/animation';
 
 // Reset
 @import './base/reset';

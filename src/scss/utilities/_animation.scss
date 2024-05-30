@@ -1,0 +1,31 @@
+@keyframes blur {
+    from {
+      filter: blur(2rem);
+    }
+    to {
+      filter: blur(0);
+    }
+}
+
+@keyframes appear {
+	from {
+	  opacity: 0%;
+	}  
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes appearfromtop {
+	from {
+	  height: $nav-height;
+	}  
+	to {
+		height: 100%;
+	}
+}
+
+// animation for all pages
+main {
+  animation: .4s ease-in blur;
+}

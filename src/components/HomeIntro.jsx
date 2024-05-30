@@ -31,6 +31,7 @@ const HomeIntro = () => {
         backgroundPosition: `center`,
         backgroundRepeat: `no-repeat`,
         width: `100%`,
+        opacity: `0.95`,
   }
 
   useEffect(() => {

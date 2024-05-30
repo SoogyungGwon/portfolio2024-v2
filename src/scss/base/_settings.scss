@@ -4,8 +4,7 @@
 $main: #3B2C9B;
 $sub1: #7C72BD;
 $sub2: #fff;
-$sub3: #fff;
-// #FFF1D9;
+$sub3: #FFF1D9;
 
 $background: #fff;
 
@@ -15,7 +14,8 @@ $headingFont: 'Judson', serif;
 
 // Layout
 $section-padding: em(16) em(20);
-$page-top-padding: 70px;
+$page-top-padding: 90px;
+$nav-height: 66px;
 
 // Breakpoints
 $msmall: 400; //400 ~ 480

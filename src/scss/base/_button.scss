@@ -10,8 +10,16 @@ button {
     font-weight: 700;
     display: inline-block;
     margin: .15rem;
+
+    &:hover, &:active, &:visited {
+      color: $main;
+    }
+
+    &:hover {
+      background-color: $sub1;
+      color: $sub2;
+      border: $sub1;
+    }
   }
   
-  button:hover, button:active, button:visited {
-    color: $main;
-}
+  

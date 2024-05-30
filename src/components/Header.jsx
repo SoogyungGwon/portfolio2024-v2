@@ -34,6 +34,7 @@ const Header = () => {
             <div id="nav-logo">
               <li><NavLink to='/home' end>{<img id="home-logo" src={logo} />}</NavLink></li>
             </div>
+            <div><hr/></div>
             <div className="nav-menus">
               <li><NavLink to='/projects' >Projects</NavLink></li>
               <li><NavLink to='/about'>About</NavLink></li>
