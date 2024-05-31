@@ -1,5 +1,5 @@
 //Publish
-const APP_FOLDER_NAME = "soo-portfolio";
+const APP_FOLDER_NAME = "/";
 const OTHER_GLOBAL = "other-global";
 export { APP_FOLDER_NAME, OTHER_GLOBAL }
 

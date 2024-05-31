@@ -5,8 +5,6 @@ import { APP_FOLDER_NAME } from './globals/globalVariables';
 
 // Import pages
 import App from './App.jsx'
-import IntroPage from './pages/IntroPage'
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
