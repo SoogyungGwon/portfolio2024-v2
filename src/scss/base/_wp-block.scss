@@ -11,6 +11,7 @@
 
         @include mq(em($mlandscape-2)) {
             flex: 1;
+            max-width: 15%;
         }
 
         @include mq(em($mtablet)) {
