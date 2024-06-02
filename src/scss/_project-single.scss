@@ -132,6 +132,10 @@
             }
 
             .project-story-wrapper {
+
+                a {
+                    text-decoration: underline;
+                }
                 @include mq(em($mtablet)) {
                     grid-area: storywrapper;
                 }

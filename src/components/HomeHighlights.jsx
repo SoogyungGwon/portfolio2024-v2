@@ -42,7 +42,7 @@ const HomeHighlights = () => {
             <p className="highlight">
                 {restData[randomNumber].acf.project_highlight}
             </p>
-            <button className="highlight-more-button"><Link to={`/projects/${restData[randomNumber].slug}`}>See More</Link></button>
+            <Link to={`/projects/${restData[randomNumber].slug}`}><button className="highlight-more-button">See More</button></Link>
         </div>
         
       </div>
