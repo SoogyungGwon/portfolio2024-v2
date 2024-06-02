@@ -1,0 +1,30 @@
+.wp-block-media-text.is-stacked-on-mobile {
+    display: flex;
+    flex-direction: column;
+    
+    @include mq(em($mlandscape-2)) {
+        flex-direction: row;
+    }
+
+    .wp-block-media-text__media {
+        align-content: center;
+
+        @include mq(em($mlandscape-2)) {
+            flex: 1;
+        }
+
+        @include mq(em($mtablet)) {
+            flex: auto;
+        }
+    }
+
+    .wp-block-media-text__content {
+        @include mq(em($mlandscape-2)) {
+            flex: 1;
+        }
+
+        @include mq(em($mtablet)) {
+            flex: auto;
+        }
+    }
+}

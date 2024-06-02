@@ -136,6 +136,23 @@
                 a {
                     text-decoration: underline;
                 }
+
+                .project-process {
+                    .toggle {
+                        h3 {
+                            text-decoration: underline;
+                            &:before {
+                                content: "";
+                            }
+                        }
+
+                        h4 {
+                                                
+                        }
+                    }
+                }
+
+                
                 @include mq(em($mtablet)) {
                     grid-area: storywrapper;
                 }
