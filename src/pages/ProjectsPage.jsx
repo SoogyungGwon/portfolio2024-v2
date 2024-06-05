@@ -8,7 +8,7 @@ import darkDot from '../assets/bg/dark-purple.svg'
 import { restBase } from '../globals/globalVariables'
 
 const ProjectsPage = () => {
-  const restPath = restBase + 'soo-project/?_embed&order=asc'
+  const restPath = restBase + 'soo-project/?_embed&order=desc'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
   
