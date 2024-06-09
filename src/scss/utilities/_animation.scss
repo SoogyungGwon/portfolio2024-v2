@@ -16,15 +16,6 @@
 	}
 }
 
-@keyframes appearfromtop {
-	from {
-	  height: $nav-height;
-	}  
-	to {
-		height: 100%;
-	}
-}
-
 // animation for all pages
 main {
   animation: .4s ease-in blur;

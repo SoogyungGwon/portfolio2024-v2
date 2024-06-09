@@ -28,12 +28,16 @@ header {
                 margin-left: 1rem;
                 align-content: center;
                 text-align: center;
+                position: relative;
 
-                &:hover {
-                    text-decoration: underline;
-                }
+                .nav-item {
+
+                    &:hover {
+                        animation: 0.3s ease-in both blur;
+                        text-decoration: underline;
+                    }
+                }                
             }
-
         }
     }
 
@@ -55,6 +59,10 @@ header {
             background-color: $sub2;
             width: 100vw;
             min-height: 100vh;
+
+            .nav-item {
+                animation: 0.3s ease-in both blur;
+            } 
         }
         
         svg {
