@@ -8,6 +8,10 @@
     #loading {
         text-align: center;
         margin: 0 auto;
+        max-height: 75px;
+        max-width: 75px;
+
+        animation: 0.5s linear infinite blink;
     }
 }
 

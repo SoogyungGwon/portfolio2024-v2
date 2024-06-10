@@ -20,7 +20,7 @@
         position: relative;
         animation: .5s ease-in blur;
 
-        h1 {
+        .site-intro-heading {
             font-size: clamp(3rem, 10vw, 20rem);
             line-height: 0.9;
             text-align: center;
@@ -30,6 +30,10 @@
             margin: 0 2rem;
             padding: 3rem;
             align-items: center;
+
+            &:hover {
+                animation: 0.3s ease-in both blur;
+            }
         }
     }
 

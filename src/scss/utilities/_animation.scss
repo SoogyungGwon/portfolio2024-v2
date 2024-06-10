@@ -16,6 +16,15 @@
 	}
 }
 
+@keyframes blink {
+	from {
+	  opacity: 50%;
+	}  
+	to {
+		opacity: 100%;
+	}
+}
+
 // animation for all pages
 main {
   animation: .4s ease-in blur;
