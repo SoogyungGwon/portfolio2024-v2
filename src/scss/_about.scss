@@ -123,8 +123,13 @@
         }
 
         .funfact-item {
+
             border: 1px $main solid;
             border-radius: 10px;
+
+            h3 {
+                font-size: 1.17rem;                
+            }
 
             article {
                 .collapsible-toggle-wrapper {
