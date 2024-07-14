@@ -15,7 +15,7 @@ const Collapsible = ( {title, pcontent, presetOpen }) => {
 
   return (
     <div className="collapsible-container">
-        <div className="collapsible-toggle-wrapper">
+        <div className="collapsible-toggle-wrapper" onClick={toggle}>
             <h3 className="collapsible-name">{title}</h3>
             <button className="collapsible-button" onClick={toggle}>
               {open ?
