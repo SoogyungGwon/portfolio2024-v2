@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Loading from './Loading'
 
 // import variables
@@ -9,11 +10,7 @@ const AboutSkillset = () => {
   const restPath = restBase + 'soo-project-category?orderby=name&order=asc&per_page=100'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
-
-  const handleSkillIcon = () => {
-
-  }
-
+  
   useEffect(() => {
     const fetchData = async () => {
         const response = await fetch(restPath)
@@ -35,7 +32,7 @@ const AboutSkillset = () => {
     <section className="about-skillset" id="about-skillset">
       <div className="about-skillset-heading">
         <h2>Skillset</h2>
-        {/* <button onClick={handleSkillIcon}>with icon</button> */}
+        <Link to="/skillgame"><button className="play-skillgame-button">Play Skill Game</button></Link>
       </div>
       <div className="skillset-tags">
         {restData.map((tag) => (

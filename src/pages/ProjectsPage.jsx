@@ -32,6 +32,8 @@ const ProjectsPage = () => {
     fetchData()
   }, [restPath])
 
+  
+
   return (
     <main id="project-main">
     { isLoaded ?
