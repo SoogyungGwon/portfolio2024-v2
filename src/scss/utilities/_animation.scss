@@ -25,6 +25,16 @@
 	}
 }
 
+// animation for modal
+@keyframes modalopen {
+	from {
+		transform: translateY(-50px); opacity: 0;
+	}
+	to {
+		transform: translateY(0); opacity: 1;
+	}
+  }
+
 // animation for all pages
 main {
   animation: .4s ease-in blur;

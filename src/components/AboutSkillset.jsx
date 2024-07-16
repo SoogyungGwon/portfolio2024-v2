@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Loading from './Loading'
 
+//import components
+import Modal from '../components/Modal'
+import SkillGame from './SkillGame'
+
 // import variables
 import { restBase } from '../globals/globalVariables'
 
@@ -10,6 +14,24 @@ const AboutSkillset = () => {
   const restPath = restBase + 'soo-project-category?orderby=name&order=asc&per_page=100'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Disable scrolling when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isModalOpen]);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -32,10 +54,16 @@ const AboutSkillset = () => {
     <section className="about-skillset" id="about-skillset">
       <div className="about-skillset-heading">
         <h2>Skillset</h2>
-        <Link to="/skillgame"><button className="play-skillgame-button">Play Skill Game</button></Link>
+        <button className="play-skillgame-button" onClick={openModal}>Take Quiz</button>
       </div>
+       {isModalOpen && (
+          <Modal show={isModalOpen} handleClose={closeModal}>
+            <SkillGame />
+          </Modal>
+       )}
       <div className="skillset-tags">
         {restData.map((tag) => (
+          tag.name !== "Featured" &&
             <span key={tag.id} className="skillset-tag">{tag.name}</span>
           ))}
       </div>

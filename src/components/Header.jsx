@@ -18,6 +18,14 @@ const Header = () => {
       setWidth(window.innerWidth);
     };
 
+    const updateViewportDimensions = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.documentElement.style.setProperty('--viewport-width-px', `${width}px`);
+      document.documentElement.style.setProperty('--viewport-height-px', `${height}px`);
+    }
+
+    window.addEventListener('resize', updateViewportDimensions);
     window.addEventListener('resize', handleResize);
 
     return () => {

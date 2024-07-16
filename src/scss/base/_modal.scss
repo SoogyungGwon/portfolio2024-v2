@@ -1,0 +1,37 @@
+.modal {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+    width: 100vw;  
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: .4s linear modalopen;
+    overflow: scroll;
+    
+    .modal-content {
+        background-color: white;
+        width: 100%;
+        height: fit-content;
+        border: 1px solid $main;
+        border-radius: 20px;
+        margin: .5rem;
+
+        @include mq(em($mtablet)) {
+            width: fit-content;
+            max-width: 800px;
+        }
+
+        .close-button {
+            text-align: right;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-right: 1rem;
+            max-height: 1.75rem;
+        }
+    }
+}

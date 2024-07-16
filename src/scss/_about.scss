@@ -33,8 +33,11 @@
         }
 
         .cover-story-image {
-            max-width: 50%;
             align-self: end;
+
+            @include mq(em($mlandscape)) {
+                max-width: 50%;
+            }
 
             @include mq(em($mlandscape-2)) {
                 grid-area: storyimage;
