@@ -92,7 +92,9 @@ const SkillGame = () => {
             {openAnswer && randomNumber !== null ? (
               <>
               <div className="answer-name">{categories[randomNumber]?.name}</div>
-              <img src={categories[randomNumber]?.icon} alt="quiz-answer" />
+              {categories[randomNumber].icon &&
+                <img src={categories[randomNumber]?.icon} alt="quiz-answer" />
+              }
               </>
             )
             :
