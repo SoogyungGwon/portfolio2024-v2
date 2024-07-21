@@ -11,7 +11,6 @@ import './scss/styles.scss'
 import IntroPage from './pages/IntroPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
-// import SkillGamePage from './pages/SkillGamePage'
 import ProjectsPage from './pages/ProjectsPage'
 import ProjectSinglePage from './pages/ProjectSinglePage'
 import PageNotFound from './pages/PageNotFound'
@@ -30,7 +29,6 @@ const App = () => {
             <Routes>
                 <Route path="/home" exact element={ <HomePage /> } />
                 <Route path="/about" element={ <AboutPage /> } />
-                {/* <Route path="/skillgame" element={ <SkillGamePage /> } /> */}
                 <Route path="/projects" element={ <ProjectsPage />} />
                 <Route path="/projects/:slug" element={ <ProjectSinglePage />} />
                 <Route path="*" element={<PageNotFound />} />
